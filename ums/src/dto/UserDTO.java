@@ -8,7 +8,7 @@ public class UserDTO {
 	private int userage;
 	private String userphone;
 	private String useraddr;
-	
+
 	public UserDTO() {;}
 
 	public UserDTO(String userid, String userpw, String username, int userage, String userphone, String useraddr) {
@@ -20,6 +20,22 @@ public class UserDTO {
 		this.useraddr = useraddr;
 	}
 
+	public UserDTO(String[] datas) {
+		userid = datas[0];
+		userpw = datas[1];
+		username = datas[2];
+		userage = Integer.parseInt(datas[3]);
+		userphone = datas[4];
+		useraddr = datas[5];
+	}
+	
+	
+	@Override
+	public String toString() {
+		return userid + "\t" + userpw + "\t" + username + "\t" + userage + "\t" + userphone + "\t" + useraddr;
+	}
+	
+	
 	public String getUserid() {
 		return userid;
 	}
@@ -67,12 +83,6 @@ public class UserDTO {
 	public void setUseraddr(String useraddr) {
 		this.useraddr = useraddr;
 	}
-	
-	@Override
-		public String toString() {
-			return userid + "\t" + userpw + "\t" + username + "\t" + userage + "\t" + userphone + "\t" + useraddr;
-		}
-	
-	
-	
+
+
 }

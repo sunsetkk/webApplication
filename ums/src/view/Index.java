@@ -16,6 +16,7 @@ public class Index {
 				new JoinView();
 			} else if(choice == 2) {
 				//로그인
+				new LoginView();
 			} else if(choice == 3) {
 				//나가기
 				break;
