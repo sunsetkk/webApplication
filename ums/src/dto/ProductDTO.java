@@ -20,6 +20,16 @@ public class ProductDTO {
 		this.userid = userid;
 	}
 	
+	public ProductDTO(String[] datas) {
+		prodnum = Integer.parseInt(datas[0]);
+		prodname = datas[1];
+		prodprice = Integer.parseInt(datas[2]);
+		prodamount = Integer.parseInt(datas[3]);
+		prodinfo = datas[4];
+		likecnt = Integer.parseInt(datas[5]);
+		userid = datas[6];
+	}
+
 	@Override
 	public String toString() {
 		return prodnum + "\t" + prodname + "\t" + prodprice + "\t" + prodamount + "\t" + prodinfo + "\t" + likecnt + "\t" + userid;
@@ -71,6 +81,14 @@ public class ProductDTO {
 
 	public void setUserid(String userid) {
 		this.userid = userid;
+	}
+
+	public int getLikecnt() {
+		return likecnt;
+	}
+
+	public void setLikecnt(int likecnt) {
+		this.likecnt = likecnt;
 	}
 	
 	
